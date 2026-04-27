@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    padding: 0px 0px;
+    margin: 0px 0px;
+    box-sizing: border-box;
+    font-family: Roboto, sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    overflow: hidden;
+    padding: 20px 28px;
+    width: 50%;
+    border: 1px solid #C4C4C4;
+    border-top: 20px solid #E5A52F;
+    margin: 0px auto;
+    border-radius: 10px;
+}
+
+h1,
+.add {
+    text-align: center;
+}
+
+.addelement {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #C4C4C4;
+    border-radius: 10px;
+    padding: 10px 10px;
+}
+
+.sort {
+    width: 25px;
+    height: 15px;
+    background: url("img/sort.svg");
+    display: block;
+    margin: 14px 0px;
+    margin-left: auto;
+}
+
+.btns {
+    display: flex;
+    gap: 10px;
+}
+
+.edit {
+    width: 20px;
+    height: 20px;
+    background: url("img/edit.svg");
+}
+
+.edit:hover{
+    background: url(img/edithover.svg);
+}
+
+input {
+    width: 85%;
+    border: none;
+    outline: none;
+    text-align: left;
+}
+
+.add {
+    margin: 0px auto;
+    margin-top: 20px;
+    width: 50%;
+    background-color: #833AE0;
+    display: flex;
+    color: #fff;
+    border-radius: 21px;
+    align-items: center;
+    cursor: pointer;
+}
+
+.add button {
+    width: 45px;
+    height: 45px;
+    color: #fff;
+    border-radius: 21px;
+    border: none;
+    background-color: #9953F1;
+    cursor: pointer;
+}
+
+.add p {
+    flex: 1;
+    text-align: center;
+}
+
+ol {
+    text-align: left;
+    border: 1px solid #C4C4C4;
+    border-radius: 10px;
+    padding: 5px 10px;
+    margin: 10px 0px;
+}
+
+ol li {
+    display: flex;
+    margin: 5px 0px;
+    justify-content: space-between;
+    word-break: break-word;
+}
+
+.quit {
+    width: 20px;
+    height: 20px;
+    background: url(img/quit.svg);
+}
+
+.quit:hover {
+    background: url(img/quithover.svg);
+}
