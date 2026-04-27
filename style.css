@@ -67,6 +67,10 @@ input {
     flex-shrink: 0;
 }
 
+.quit:hover {
+    background: url(img/quithover.svg) no-repeat center/contain;
+}
+
 .btns {
     display: flex;
     gap: 10px;
