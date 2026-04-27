@@ -70,6 +70,10 @@ sortbg.addEventListener("mouseout", () => {
     }
 })
 
+quitbtninput.addEventListener("click", () => {
+    siyahiInput.value = ""
+})
+
 siyahi.addEventListener("click", (e) => {
     if (e.target.classList.contains("quit")) {
         let li = e.target.closest("li")
@@ -78,15 +82,19 @@ siyahi.addEventListener("click", (e) => {
         show(siyahiArr)
     }
 
-    if(e.target.classList.contains("edit")) {
+    if (e.target.classList.contains("edit")) {
         let li = e.target.closest("li")
         let index = Array.from(siyahi.children).indexOf(li)
-        addElement.style.display = "flex"
-        siyahiArr.splice(index, 1)
-        siyahiInput.value = li.innerText.slice(3)
+        let currentText = siyahiArr[index]
+        li.innerHTML = `<input class="edit-input" value="${currentText}" /><div class="btns"><div class="save"></div></div>`
+    }
+
+    if (e.target.classList.contains("save")) {
+        let li = e.target.closest("li")
+        let index = Array.from(siyahi.children).indexOf(li)
+        let newValue = li.querySelector(".edit-input").value
+        siyahiArr[index] = newValue
+        show(siyahiArr)
     }
 })
 
-quitbtninput.addEventListener("click", ()=> {
-    siyahiInput.value = ""
-})
